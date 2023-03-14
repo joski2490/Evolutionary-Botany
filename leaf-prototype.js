@@ -13,7 +13,7 @@ let Leaf = function(parent) {
 
 Leaf.prototype.grow = function() {
     // This should 
-    this.angle = this.parent.angle;
+    this.angle = this.parent.angle*Math.PI/2;
     this.root.grow();
 };
 
