@@ -42,12 +42,12 @@ let Segment = function(parent, direction) {
     }
     if (direction == "left") {
         // this.angle = this.parent.angle + this.dna.branchingAngle;
-        this.angle = this.parent.angle + (this.dna.branchingAngle * sketch.map(this.segmentID, 10, 30, 5, 0.1));
+        this.angle = this.parent.angle + (this.dna.branchingAngle * sketch.map(this.segmentID, 10, 30, 5, 0.1))*2;
     } else if (direction == "forward") {
-        this.angle = this.parent.angle;
+        this.angle = this.parent.angle*2;
     } else if (direction == "right") {
         // this.angle = this.parent.angle - this.dna.branchingAngle;
-        this.angle = this.parent.angle - (this.dna.branchingAngle * sketch.map(this.segmentID, 10, 30, 5, 0.1));
+        this.angle = this.parent.angle - (this.dna.branchingAngle * sketch.map(this.segmentID, 10, 30, 5, 0.1))*2;
     }
     this.children = [];
     this.length = 0;
